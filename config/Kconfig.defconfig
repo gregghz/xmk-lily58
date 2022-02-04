@@ -1,0 +1,44 @@
+config ZMK_BLE
+    default y
+
+config ZMK_USB
+    default y
+
+if SHIELD_LILY58_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "lily58"
+
+endif
+
+if SHIELD_LILY58_LEFTCENTRAL || SHIELD_LILY58_LEFTSINGLE
+
+config ZMK_KEYBOARD_NAME
+    default "Lily58 Left"
+
+endif
+
+
+if SHIELD_LILY58_RIGHTCENTRAL || SHIELD_LILY58_RIGHTSINGLE
+
+config ZMK_KEYBOARD_NAME
+    default "Lily58 Right"
+
+endif
+
+if SHIELD_LILY58_DONGLE || SHIELD_LILY58_LEFTCENTRAL || SHIELD_LILY58_RIGHTCENTRAL
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+    default y
+
+endif
+
+if !SHIELD_LILY58_DONGLE
+
+config ZMK_BATTERY_VOLTAGE_DIVIDER
+    default y
+
+endif

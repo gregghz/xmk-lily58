@@ -1,0 +1,14 @@
+config SHIELD_LILY58_DONGLE
+    def_bool $(shields_list_contains,lily58_dongle)
+
+config SHIELD_LILY58_LEFTCENTRAL
+    def_bool $(shields_list_contains,lily58_leftcentral)
+
+config SHIELD_LILY58_RIGHTCENTRAL
+    def_bool $(shields_list_contains,lily58_rightcentral)
+
+config SHIELD_LILY58_LEFTSINGLE
+    def_bool $(shields_list_contains,lily58_leftsingle)
+
+config SHIELD_LILY58_RIGHTSINGLE
+    def_bool $(shields_list_contains,lily58_rightsingle)
